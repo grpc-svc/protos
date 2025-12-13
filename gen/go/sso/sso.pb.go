@@ -267,7 +267,7 @@ func (x *IsAdminRequest) GetUserId() int64 {
 
 type IsAdminResponse struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	IsAdmin       int64                  `protobuf:"varint,1,opt,name=is_admin,json=isAdmin,proto3" json:"is_admin,omitempty"`
+	IsAdmin       bool                   `protobuf:"varint,1,opt,name=is_admin,json=isAdmin,proto3" json:"is_admin,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -302,11 +302,11 @@ func (*IsAdminResponse) Descriptor() ([]byte, []int) {
 	return file_sso_sso_proto_rawDescGZIP(), []int{5}
 }
 
-func (x *IsAdminResponse) GetIsAdmin() int64 {
+func (x *IsAdminResponse) GetIsAdmin() bool {
 	if x != nil {
 		return x.IsAdmin
 	}
-	return 0
+	return false
 }
 
 type LogoutRequest struct {
@@ -416,7 +416,7 @@ const file_sso_sso_proto_rawDesc = "" +
 	"\x0eIsAdminRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\x03R\x06userId\",\n" +
 	"\x0fIsAdminResponse\x12\x19\n" +
-	"\bis_admin\x18\x01 \x01(\x03R\aisAdmin\"%\n" +
+	"\bis_admin\x18\x01 \x01(\bR\aisAdmin\"%\n" +
 	"\rLogoutRequest\x12\x14\n" +
 	"\x05token\x18\x01 \x01(\tR\x05token\"*\n" +
 	"\x0eLogoutResponse\x12\x18\n" +
